@@ -1,8 +1,8 @@
 import axios from 'axios';
 import crypto from 'crypto';
-import { config } from '../config/index.js';
-import { logger } from '../config/logger.js';
-import type { RechargeRequest, RechargeResponse, Operator } from '../types/index.js';
+import { config } from '../config/index';
+import { logger } from '../config/logger';
+import type { RechargeRequest, RechargeResponse, Operator } from '../types/index';
 
 // Maps our operator codes to PaySprint operator IDs
 const PAYSPRINT_OPERATOR_MAP: Record<Operator, string> = {

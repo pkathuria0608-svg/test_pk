@@ -1,7 +1,7 @@
 import { Router, Request, Response } from 'express';
-import { parsePaymentCallback } from '../services/payment.js';
-import { handlePaymentConfirmed } from '../handlers/conversation.js';
-import { logger } from '../config/logger.js';
+import { parsePaymentCallback } from '../services/payment';
+import { handlePaymentConfirmed } from '../handlers/conversation';
+import { logger } from '../config/logger';
 
 export const paymentRouter = Router();
 

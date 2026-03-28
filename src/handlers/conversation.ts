@@ -1,15 +1,15 @@
 import { v4 as uuidv4 } from 'uuid';
-import { query, queryOne, withTransaction } from '../db/index.js';
-import { parseIntent, generateHelpResponse } from '../services/claude.js';
-import { detectOperator, executeRecharge, checkRechargeStatus } from '../services/recharge.js';
-import { getPlans, getPopularPlans, formatPlansMessage, getPlanById } from '../services/plans.js';
-import { createPaymentOrder } from '../services/payment.js';
-import { sendText, sendButtons } from '../services/gupshup.js';
-import { config } from '../config/index.js';
-import { logger } from '../config/logger.js';
+import { query, queryOne, withTransaction } from '../db/index';
+import { parseIntent, generateHelpResponse } from '../services/claude';
+import { detectOperator, executeRecharge, checkRechargeStatus } from '../services/recharge';
+import { getPlans, getPopularPlans, formatPlansMessage, getPlanById } from '../services/plans';
+import { createPaymentOrder } from '../services/payment';
+import { sendText, sendButtons } from '../services/gupshup';
+import { config } from '../config/index';
+import { logger } from '../config/logger';
 import type {
   ConversationState, ConversationStep, User, Operator, RechargePlan, GupshupMessage
-} from '../types/index.js';
+} from '../types/index';
 
 // ─── User helpers ──────────────────────────────────────────────────────────────
 

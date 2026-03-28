@@ -1,9 +1,9 @@
 import axios from 'axios';
 import crypto from 'crypto';
 import { v4 as uuidv4 } from 'uuid';
-import { config } from '../config/index.js';
-import { logger } from '../config/logger.js';
-import type { PaymentOrder, PaymentCallback } from '../types/index.js';
+import { config } from '../config/index';
+import { logger } from '../config/logger';
+import type { PaymentOrder, PaymentCallback } from '../types/index';
 
 function sha256(data: string): string {
   return crypto.createHash('sha256').update(data).digest('hex');

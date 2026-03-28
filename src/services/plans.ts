@@ -1,8 +1,8 @@
 import axios from 'axios';
-import { config } from '../config/index.js';
-import { logger } from '../config/logger.js';
-import { query, queryOne } from '../db/index.js';
-import type { RechargePlan, Operator } from '../types/index.js';
+import { config } from '../config/index';
+import { logger } from '../config/logger';
+import { query, queryOne } from '../db/index';
+import type { RechargePlan, Operator } from '../types/index';
 
 const CACHE_TTL_MS = 24 * 60 * 60 * 1000; // 24 hours
 

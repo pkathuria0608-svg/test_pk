@@ -1,7 +1,7 @@
 import Anthropic from '@anthropic-ai/sdk';
-import { config } from '../config/index.js';
-import { logger } from '../config/logger.js';
-import type { ParsedIntent, Operator } from '../types/index.js';
+import { config } from '../config/index';
+import { logger } from '../config/logger';
+import type { ParsedIntent, Operator } from '../types/index';
 
 const client = new Anthropic({ apiKey: config.anthropic.apiKey });
 

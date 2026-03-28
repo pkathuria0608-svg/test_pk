@@ -1,7 +1,7 @@
 import { Router, Request, Response } from 'express';
-import { handleMessage } from '../handlers/conversation.js';
-import { logger } from '../config/logger.js';
-import type { GupshupMessage } from '../types/index.js';
+import { handleMessage } from '../handlers/conversation';
+import { logger } from '../config/logger';
+import type { GupshupMessage } from '../types/index';
 
 export const webhookRouter = Router();
 

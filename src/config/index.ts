@@ -40,9 +40,9 @@ export const config = {
   },
 
   gupshup: {
-    userId: required('2000264091'),
-    password: required('C@Ltk#SX'),
-    whatsappNumber: required('917835854817'),
+    userId: required('GUPSHUP_USER_ID'),
+    password: required('GUPSHUP_PASSWORD'),
+    whatsappNumber: required('GUPSHUP_WHATSAPP_NUMBER'),
   },
 
   platform: {

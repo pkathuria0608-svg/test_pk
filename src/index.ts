@@ -1,10 +1,10 @@
 import express from 'express';
 import cors from 'cors';
-import { config } from './config/index.js';
-import { logger } from './config/logger.js';
-import { checkConnection } from './db/index.js';
-import { webhookRouter } from './routes/webhook.js';
-import { paymentRouter } from './routes/payment.js';
+import { config } from './config/index';
+import { logger } from './config/logger';
+import { checkConnection } from './db/index';
+import { webhookRouter } from './routes/webhook';
+import { paymentRouter } from './routes/payment';
 
 const app = express();
 

@@ -5,29 +5,20 @@ import { logger } from '../config/logger';
 const GUPSHUP_API = 'https://media.smsgupshup.com/GatewayAPI/rest';
 
 /**
- * Build the common auth + routing params required by the Gupshup REST gateway.
- */
-function baseParams(to: string): Record<string, string> {
-  return {
-    userid: config.gupshup.userId,
-    password: config.gupshup.password,
-    send_to: normalizePhone(to),
-    auth_scheme: 'plain',
-    method: 'SendMessage',
-    v: '1.1',
-    format: 'json',
-  };
-}
-
-/**
  * Send a plain text message via Gupshup SMS/WhatsApp REST gateway.
  */
 export async function sendText(to: string, text: string): Promise<void> {
   const phone = normalizePhone(to);
   try {
     const params = new URLSearchParams({
-      ...baseParams(to),
+      send_to: phone,
       msg_type: 'DATA_TEXT',
+      userid: config.gupshup.userId,
+      auth_scheme: 'plain',
+      password: `"${config.gupshup.password}"`,
+      method: 'SendMessage',
+      v: '1.1',
+      format: 'json',
       msg: text,
     });
 
